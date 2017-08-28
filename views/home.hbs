@@ -1,34 +1,42 @@
 <div class="wrapper">
-  <form method="post">
+  <form method="post" action="/reg_numbers">
     <label for="regNumba" id="regLabel">Registration Number: </label><br>
     <input type="text" name="regNumba" placeholder="Enter registration number" id="regNumba"><br>
     <button type="submit" class="add" name="button">Add</button>
     <div class="radios">
   </form>
     <label for="location"><span>Filter: </span><br></label>
-        <label for="rr0" method="post">
-          <input type="radio" class="radio" id="rr0" name="location" value="All">
+        <label for="rr0">
+          <input onclick="radioSubmit()" type="radio" class="radio" id="rr0" name="location" value="All">
           All
         </label>
         <label for="rr1">
-          <input type="radio" class="radio" id="rr1" name="location" value="Cape Town">
+          <input onclick="radioSubmit()" type="radio" class="radio" id="rr1" name="location" value="CA">
           Cape Town
         </label>
         <label for="rr2">
-          <input type="radio" class="radio" id="rr2" name="location" value="Paarl">
+          <input onclick="radioSubmit()" type="radio" class="radio" id="rr2" name="location" value="CJ">
           Paarl
         </label>
         <label for="rr3">
-          <input type="radio" class="radio" id="rr3" name="location" value="Eastern Cape">
+          <input onclick="radioSubmit()" type="radio" class="radio" id="rr3" name="location" value="EC">
           Eastern Cape
         </label>
   </div>
+  {{#if messages.blank}}
+    <div>
+      <p>message.blank</p>
+    </div>
+  {{/if}}
   <div class="plates">
-    <p class="nPlate">CA 11111</p>
+    {{#each reg}}
+      <li>{{this.regNum}}</li>
+    {{/each}}
+    <!-- <p class="nPlate">CA 11111</p>
     <p class="nPlate">CJ 22222</p>
     <p class="nPlate">EC 33333</p>
     <p class="nPlate">CA 44444</p>
     <p class="nPlate">CJ 55555</p>
-    <p class="nPlate">EC 66666</p>
+    <p class="nPlate">EC 66666</p> -->
   </div>
 </div>

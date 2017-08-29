@@ -56,7 +56,8 @@ span{
 .plates{
   margin-top: 10px;
 }
-.nPlate{
+li{
+  display: block;
   padding: 10px;
   background-color: yellow;
   width: 140px;
@@ -68,4 +69,16 @@ span{
 }
 label{
   margin-left: 10px;
+}
+.blank{
+  color: red;
+}
+#blank{
+  color: red;
+}
+#duplicate{
+  color: blue;
+}
+#success{
+  color: green;
 }

@@ -23,9 +23,10 @@ app.get("/reg_numbers",function(req, res) {
     res.render("home",{reg:db});
   });
 });
+app.get("/",function(req, res) {
+    res.redirect("/reg_numbers");
+});
 app.post("/reg_numbers",function(req, res) {
-  // console.log(req.body);
-  // res.send(req.body);
   if(req.body.regNumba.length<1){
     req.flash("blank","Please enter the registration number.");
     res.redirect("/reg_numbers");

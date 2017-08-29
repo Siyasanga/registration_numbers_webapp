@@ -2,6 +2,15 @@
   <form method="post" action="/reg_numbers">
     <label for="regNumba" id="regLabel">Registration Number: </label><br>
     <input type="text" name="regNumba" placeholder="Enter registration number" id="regNumba"><br>
+    {{#if messages.blank}}
+        <p id="blank">{{messages.blank}}</p>
+    {{/if}}
+    {{#if messages.success}}
+        <p id="success">{{messages.success}}</p>
+    {{/if}}
+    {{#if messages.duplicate}}
+        <p id="duplicate">{{messages.duplicate}}</p>
+    {{/if}}
     <button type="submit" class="add" name="button">Add</button>
     <div class="radios">
   </form>
@@ -23,11 +32,6 @@
           Eastern Cape
         </label>
   </div>
-  {{#if messages.blank}}
-    <div>
-      <p>message.blank</p>
-    </div>
-  {{/if}}
   <div class="plates">
     {{#each reg}}
       <li>{{this.regNum}}</li>

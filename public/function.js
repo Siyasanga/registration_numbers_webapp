@@ -1,5 +1,5 @@
 function radioSubmit(e) {
-  console.log(event.srcElement.value);
-  window.location = __dirname+"/"+event.srcElement.value;
+  console.log(window.location.origin);
+  window.location = window.location.origin+"/"+event.srcElement.value;
 
 }

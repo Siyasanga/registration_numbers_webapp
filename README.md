@@ -19,9 +19,9 @@ Registration_numbers_webapp is used to store registration numbers from Cape Town
     - At least node v4.2.6 installed and npm on your machine, if not you can install it using this link https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
     - MongoDB installed, if not 
  * Make a copy of the app by forking it to your repository
- * Now clone your own copy of registration_numbers_webapp repository to your local machine
- * On the termminal, change into the root folder registration_numbers_webapp then run `npm install`. This will install all package dependencies that the app uses
- * Still on the root folder, create a file called .gitignore, open it add `node_modules/` as the first line.
+ * Now clone your own copy of `registration_numbers_webapp` repository to your local machine
+ * On the termminal, change (`cd`) into the root folder `registration_numbers_webapp` then run `npm install`. This will install all package dependencies that the app uses
+ * Still on the root folder, create a file called `.gitignore`, open it add `node_modules/` as the first line.
  * Still on the terminal, in the root folder use node to run the app like this: `node index.js`
  * The server will start and all that is needed to do is open the http address that its running on in the web browser.
  
